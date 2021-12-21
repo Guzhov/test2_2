@@ -8,12 +8,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 
 public class LoginTest {
+
     public static LoginPage loginPage;
     public static Favorites favorites;
     public static WebDriver driver;
 
     @BeforeClass
     public static void setup() {
+
         System.setProperty("webdriver.chrome.driver", ConfProperties.getProperty("chromedriver"));
 
         driver = new ChromeDriver();
