@@ -45,5 +45,4 @@ public class Favorites {
 
     public void entryCars() {
         cars.click(); }
-
 }
