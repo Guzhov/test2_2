@@ -8,12 +8,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 
 public class LoginTest {
+
     public static LoginPage loginPage;
     public static Favorites favorites;
     public static WebDriver driver;
 
     @BeforeClass
     public static void setup() {
+
         System.setProperty("webdriver.chrome.driver", ConfProperties.getProperty("chromedriver"));
 
         driver = new ChromeDriver();
@@ -26,12 +28,12 @@ public class LoginTest {
 
     @Test
     public void loginTest() {
+
         loginPage.clickGoToLogin();
 
         loginPage.inputLogin(ConfProperties.getProperty("login"));
         loginPage.inputPasswd(ConfProperties.getProperty("password"));
         loginPage.clickLoginBtn();
-
         favorites.entryCars();
         favorites.addFavorites();
     }
@@ -39,5 +41,6 @@ public class LoginTest {
     @AfterClass
     public static void tearDown() {
         driver.quit();
+
     }
 }
