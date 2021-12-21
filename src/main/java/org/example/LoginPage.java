@@ -16,11 +16,13 @@ public class LoginPage {
      */
     @FindBy(xpath = "//input[@name='sign']")
     private WebElement loginField;
+
     /**
      * определение локатора кнопки входа в аккаунт
      */
     @FindBy(xpath = "//button[@type='submit']")
     private WebElement loginBtn;
+
     /**
      * определение локатора поля ввода пароля
      */
@@ -38,16 +40,19 @@ public class LoginPage {
      */
     public void inputLogin(String login) {
         loginField.sendKeys(login); }
+
     /**
      * метод для ввода пароля
      */
     public void inputPasswd(String passwd) {
         passwdField.sendKeys(passwd); }
+
     /**
      * метод для осуществления нажатия кнопки входа в аккаунт
      */
     public void clickLoginBtn() {
         loginBtn.click(); }
+
     /**
      * метод для осуществления нажатия кнопки перехода на страницу авторизации
      */
